@@ -5,6 +5,11 @@
 html {
     font-size: 62.5%;
 }
+input,
+textarea,
+button {
+    font: inherit;
+} /* Kế thừa font chữ mặc định */
 
 body {
     font-size: 1.6rem;
@@ -19,6 +24,7 @@ body {
     --text-color: #5f5b53;
     --primary-color: #ffb900;
     --nav-hover: 30px;
+    --text-hover: #cc333f;
 }
 /* Common */
 a {
@@ -47,7 +53,7 @@ a {
 
 .btn:hover {
     opacity: 0.9;
-    color: #cc333f;
+    color: var(--text-hover);
     transition: 0.5s, -webkit-mask-size 0.5s 0.5s;
 }
 
@@ -173,7 +179,7 @@ a {
     cursor: pointer;
 }
 .img-content .title:hover {
-    color: #0f0;
+    color: var(--text-hover);
 }
 .img-content .item:nth-of-type(1) .icon {
     background-color: #fff9e8;
