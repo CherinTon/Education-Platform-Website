@@ -357,6 +357,7 @@ a {
 .course-item .thumb {
     width: calc(100% + 2px);
     height: 278px;
+    /* margin: -1px; */
     margin: -2px 0 0 -1px;
     object-fit: cover;
     border-radius: 12px 12px 0px 0px;
@@ -421,7 +422,7 @@ a {
     flex-shrink: 0;
     animation: slide ease 16s infinite;
 }
-/*Animation activated by keyframes*/
+/*Animation slide*/
 @keyframes slide {
     0% {
         transform: translateX(0);
@@ -582,7 +583,7 @@ a {
     /* background: url(<path-to-image>) lightgray 50% / cover no-repeat; */
 }
 .blog .item:hover {
-    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.075);
 }
 .blog .thumb {
     width: 100%;
@@ -695,13 +696,23 @@ a {
     color: #bfbcb2;
     font-size: 1.4rem;
     line-height: 26px; /* 185.714% */
+    transition: background-color 0.5s;
+}
+.footer .list a:hover {
+    text-decoration: underline;
+    color: gold;
 }
 .footer .list li:last-child a {
     margin-bottom: 0;
 }
+.footer .column .list-inline li {
+    display: inline-flex;
+    align-items: baseline;
+}
 .footer .list strong {
     color: #fff;
     font-weight: 600;
+    margin-right: 4px;
 }
 .footer .copyright {
     padding: 28px 0;
