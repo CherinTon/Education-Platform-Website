@@ -95,12 +95,12 @@ a {
     font-size: 1.6rem;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.5s, -webkit-mask-size 0.5s 0.5s;
 }
 
 .btn:hover {
     opacity: 0.9;
     color: var(--text-hover);
-    transition: 0.5s, -webkit-mask-size 0.5s 0.5s;
 }
 
 /* header */
@@ -438,7 +438,7 @@ a {
     display: flex;
     width: 100%;
     flex-shrink: 0;
-    animation: slide ease 16s infinite;
+    animation: slide ease 16s infinite; /* Loop in (1-> 2-> 3-> 1) --> (1->2->.... */
 }
 /*Animation slide*/
 @keyframes slide {
@@ -598,7 +598,6 @@ a {
     flex-shrink: 0; /* khi có nhiều phần tử trên 1 hàng thì ko bị phá vỡ tỷ lệ (VD: hiển thị 3Item thay vì 9item trên cùng 1 hàng*/
     border-radius: 16px;
     background: #fff;
-    /* background: url(<path-to-image>) lightgray 50% / cover no-repeat; */
 }
 .blog .item:hover {
     box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.075);
@@ -671,8 +670,6 @@ a {
     background: #2e2100;
     padding: 96px 135px 0;
 }
-.footer .main-content {
-}
 .footer .row {
     display: flex;
     padding-bottom: 38px;
@@ -714,7 +711,6 @@ a {
     color: #bfbcb2;
     font-size: 1.4rem;
     line-height: 26px; /* 185.714% */
-    transition: background-color 0.5s;
 }
 .footer .list a:hover {
     text-decoration: underline;
@@ -734,7 +730,7 @@ a {
 }
 .footer .copyright {
     padding: 28px 0;
-    color: #807d74;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.4rem;
     line-height: 26px; /* 185.714% */
